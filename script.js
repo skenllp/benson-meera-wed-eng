@@ -21,12 +21,12 @@ tapBtn.addEventListener('keydown', (e) => {
 cover.addEventListener('click', openInvite);
 
 /* ==========================================================
-   COUNTDOWN — Wedding: January 3, 2027, 3:30 PM IST
+   COUNTDOWN — Engagement & Mylanchi: December 28, 2026, 5:00 PM IST
 ========================================================== */
-const weddingDate = new Date('2027-01-03T15:30:00+05:30').getTime();
+const engagementDate = new Date('2026-12-28T17:00:00+05:30').getTime();
 
 function tickCountdown() {
-  const diff = Math.max(0, weddingDate - Date.now());
+  const diff = Math.max(0, engagementDate - Date.now());
   const d = Math.floor(diff / 86400000);
   const h = Math.floor((diff % 86400000) / 3600000);
   const m = Math.floor((diff % 3600000) / 60000);

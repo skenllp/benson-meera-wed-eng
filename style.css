@@ -1075,7 +1075,7 @@ section {
   padding: 44px 36px 40px;
   flex: 1 1 320px;
   max-width: 480px;
-  margin: 0 auto;
+  margin: 0;
   width: 100%;
   text-align: left;
   box-shadow: 0 20px 50px -22px var(--shadow-dark);
@@ -1229,7 +1229,7 @@ section {
 .event-actions {
   display: flex;
   gap: 10px;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   margin-top: 22px;
@@ -1413,7 +1413,7 @@ section {
   flex: 1 1 320px;
   min-width: 280px;
   max-width: 460px;
-  margin: 0 auto;
+  margin: 0;
   width: 100%;
   border: 1px solid var(--divider-gold);
   padding: 44px 34px 38px;

@@ -23,7 +23,7 @@ cover.addEventListener('click', openInvite);
 /* ==========================================================
    COUNTDOWN — Engagement & Mylanchi: December 28, 2026, 5:00 PM IST
 ========================================================== */
-const engagementDate = new Date('2026-12-28T17:00:00+05:30').getTime();
+const engagementDate = new Date("December 28, 2026 17:00:00 GMT+0530").getTime();
 
 function tickCountdown() {
   const diff = Math.max(0, engagementDate - Date.now());

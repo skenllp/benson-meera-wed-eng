@@ -1,12 +1,15 @@
-# Benson & Meera — Engagement & Mylanchi Invitation
+# Benson & Meera — Engagement & Wedding Invitation
 
-Official Engagement & Mylanchi invitation website for **Benson & Meera**.
+Official invitation website for **Benson & Meera**.
 
 🔗 **Live Website:** [https://benson-meera-engagement.vercel.app/](https://benson-meera-engagement.vercel.app/)
 
 ## Celebration Details
 
-**Engagement & Mylanchi** — December 28, 2026 at 5:00 PM  
-*St. John Nepumcene's Knanaya Catholic Church (Vallara Puthen Pally), Kumarakom*  
-*Followed by traditional Mylanchi & reception at Kottayam Club, Kumarakom*
+1. **Engagement & Mylanchi** — December 28, 2026 at 5:00 PM  
+   *St. John Nepumcene's Church (Vallara Puthen Pally), Kumarakom*  
+   *Followed by reception at Kottayam Club, Kumarakom*
 
+2. **Wedding & Reception** — January 3, 2027 at 3:30 PM  
+   *St. Mary's Knanaya Catholic Church (Forane Church, Kidangoor)*  
+   *Followed by reception at Grand Arena, Pattithanam, Ettumanoor*

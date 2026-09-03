@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Mrs+Saint+Delafield&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: radial-gradient(circle at 68% 50%, #460f15 0%, #26060b 55%, #120204 100%);
+      font-family: 'Cormorant Garamond', serif;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    /* Luxury border */
+    .outer-border {
+      position: absolute;
+      inset: 20px;
+      border: 1.5px solid #d4af37;
+      pointer-events: none;
+    }
+
+    .inner-border {
+      position: absolute;
+      inset: 26px;
+      border: 0.75px solid rgba(212, 175, 55, 0.4);
+      pointer-events: none;
+    }
+
+    /* Corner embellishments */
+    .corner {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border: 2px solid #e5c158;
+    }
+    .top-left { top: 16px; left: 16px; border-right: none; border-bottom: none; }
+    .top-right { top: 16px; right: 16px; border-left: none; border-bottom: none; }
+    .bottom-left { bottom: 16px; left: 16px; border-right: none; border-top: none; }
+    .bottom-right { bottom: 16px; right: 16px; border-left: none; border-top: none; }
+
+    .content-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 40px 60px 40px 65px;
+      gap: 50px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Circular / Oval Portrait */
+    .portrait-wrapper {
+      position: relative;
+      flex-shrink: 0;
+      width: 410px;
+      height: 480px;
+      border-radius: 205px;
+      padding: 6px;
+      background: linear-gradient(145deg, #f5edd8 0%, #d4af37 50%, #8a6d25 100%);
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.7), 0 0 25px rgba(212, 175, 55, 0.2);
+    }
+
+    .portrait-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 200px;
+      overflow: hidden;
+      position: relative;
+      border: 3px solid #26060b;
+    }
+
+    .portrait-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 22%;
+      display: block;
+    }
+
+    /* Text info */
+    .info-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .badge-top {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 13.5px;
+      letter-spacing: 0.30em;
+      text-transform: uppercase;
+      color: #e5c158;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .badge-top .cross {
+      font-size: 15px;
+      color: #f5edd8;
+    }
+
+    .gold-line {
+      height: 1px;
+      background: linear-gradient(90deg, rgba(229, 193, 88, 0.8) 0%, rgba(229, 193, 88, 0.1) 90%);
+      margin-bottom: 14px;
+      width: 100%;
+    }
+
+    .couple-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 64px;
+      line-height: 1.05;
+      color: #ffffff;
+      text-shadow: 0 4px 18px rgba(0,0,0,0.6), 0 0 12px rgba(245, 237, 216, 0.25);
+      margin-bottom: 14px;
+      white-space: nowrap;
+    }
+
+    .couple-title .amp {
+      font-family: 'Mrs Saint Delafield', cursive;
+      font-size: 78px;
+      font-weight: normal;
+      color: #f5edd8;
+      margin: 0 6px;
+      vertical-align: -4px;
+    }
+
+    .invitation-text {
+      font-size: 20px;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.90);
+      line-height: 1.35;
+      margin-bottom: 8px;
+      font-weight: 400;
+    }
+
+    .events-highlight {
+      font-size: 22px;
+      color: #f5edd8;
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: 0.02em;
+      margin-bottom: 16px;
+    }
+
+    .events-highlight strong {
+      color: #f7e2a9;
+      font-weight: 600;
+    }
+
+    .events-highlight .bull {
+      color: #d4af37;
+      margin: 0 6px;
+      font-style: normal;
+    }
+
+    .diamond-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      width: 65%;
+    }
+
+    .diamond-divider .d-line {
+      flex: 1;
+      height: 1px;
+      background: rgba(212, 175, 55, 0.35);
+    }
+
+    .diamond-divider .gem {
+      width: 6.5px;
+      height: 6.5px;
+      background: #e5c158;
+      transform: rotate(45deg);
+    }
+
+    .dates-container {
+      margin-bottom: 10px;
+    }
+
+    .dates-text {
+      font-size: 20px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+
+    .venues-text {
+      font-size: 18.5px;
+      color: #dfc488;
+      font-style: italic;
+      letter-spacing: 0.03em;
+    }
+
+    .venues-text .dot {
+      margin: 0 8px;
+      color: #d4af37;
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="outer-border"></div>
+  <div class="inner-border"></div>
+  <div class="corner top-left"></div>
+  <div class="corner top-right"></div>
+  <div class="corner bottom-left"></div>
+  <div class="corner bottom-right"></div>
+
+  <div class="content-container">
+    <div class="portrait-wrapper">
+      <div class="portrait-inner">
+        <img src="couple-main.jpeg" alt="Benson & Meera">
+      </div>
+    </div>
+
+    <div class="info-wrapper">
+      <div class="badge-top">
+        <span class="cross">✝</span>
+        <span>Engagement &amp; Wedding Invitation</span>
+      </div>
+      <div class="gold-line"></div>
+
+      <h1 class="couple-title">Benson <span class="amp">&amp;</span> Meera</h1>
+
+      <p class="invitation-text">
+        Together with their families, joyfully invite you to celebrate their
+      </p>
+      <div class="events-highlight">
+        <strong>Engagement &amp; Mylanchi</strong> <span class="bull">&bull;</span> <strong>Wedding &amp; Reception</strong>
+      </div>
+
+      <div class="diamond-divider">
+        <div class="d-line"></div>
+        <div class="gem"></div>
+        <div class="d-line"></div>
+      </div>
+
+      <div class="dates-container">
+        <div class="dates-text">December 28, 2026 &amp; January 3, 2027</div>
+      </div>
+
+      <div class="venues-text">
+        Kumarakom <span class="dot">&bull;</span> Kidangoor &amp; Ettumanoor
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

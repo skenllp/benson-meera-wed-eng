@@ -1,49 +1,68 @@
 /* ============================================================
-   DESIGN TOKENS — Neutral Warm Palette:
-   Warm Ivory · Soft Taupe · Stone · Champagne Gold
+   DESIGN TOKENS — "Sunset Meets Sparkles" Palette:
+   Deep Crimson Wine (#8A191F) · Saffron Gold (#F2C447) · 
+   Sunset Orange (#F76218) · Vivid Pink (#FF1D68) · 
+   Magenta Dye (#B10065) · Royal Purple (#740580)
 ============================================================ */
 :root {
-  /* Backgrounds */
-  --ivory: #FDFBF8;
-  --pearl: #F8F5F0;
-  --blush-light: #F3EFE9;
-  --blush-mid: #E8E0D5;
+  /* Guest Color Palette Swatches */
+  --swatch-wine: #8A191F;
+  --swatch-saffron: #F2C447;
+  --swatch-orange: #F76218;
+  --swatch-pink: #FF1D68;
+  --swatch-magenta: #B10065;
+  --swatch-purple: #740580;
 
-  /* Ink / Text */
-  --ink: #2A2118;
-  --ink-soft: #5C4F3D;
-  --ink-mute: #8C7D6A;
+  /* Backgrounds — Luxurious warm ivory with delicate sunset blush */
+  --ivory: #FDF9F7;
+  --pearl: #FAF1EF;
+  --blush-light: #FCE7EC;
+  --blush-mid: #F7D4DD;
 
-  /* Primary Accent — Deep Warm Taupe / Charcoal Brown */
-  --wine-deep: #1E150A;
-  --wine: #4A3728;
-  --wine-rich: #5E4535;
-  --wine-light: #7A5C47;
+  /* Ink / Text — Rich twilight velvet ink */
+  --ink: #220D1A;
+  --ink-soft: #5A273F;
+  --ink-mute: #8E536F;
 
-  /* Secondary Accent — Muted Terracotta / Sand */
-  --rose: #9C7A5E;
-  --rose-deep: #6B4F38;
-  --rose-soft: #B89880;
-  --rose-pale: #F0E8DF;
+  /* Primary Accent — Deep Crimson & Wine */
+  --wine-deep: #4E061B;
+  --wine: #8A191F;
+  --wine-rich: #A71530;
+  --wine-light: #C92444;
 
-  /* Gold / Champagne Accents */
-  --gold: #B89A6A;
-  --gold-deep: #8A7245;
-  --gold-soft: #D4B882;
-  --gold-pale: #F5EDD8;
+  /* Secondary Accent — Sunset Magenta & Vivid Folly Pink */
+  --rose: #B10065;
+  --rose-deep: #8A191F;
+  --rose-soft: #FF1D68;
+  --rose-pale: #FEECF2;
 
-  /* Dark sections — deep warm charcoal */
-  --dark-1: #16100A;
-  --dark-2: #201710;
-  --dark-3: #2C2018;
+  /* Gold / Sparkles / Saffron Accents */
+  --gold: #F2C447;
+  --gold-deep: #D49B1E;
+  --gold-soft: #F7D675;
+  --gold-pale: #FEF8E7;
+
+  /* Sunset Vibrance & Gradients */
+  --sunset-orange: #F76218;
+  --sunset-pink: #FF1D68;
+  --sunset-magenta: #B10065;
+  --sunset-purple: #740580;
+  --sunset-gradient: linear-gradient(135deg, #740580 0%, #B10065 24%, #FF1D68 50%, #F76218 78%, #F2C447 100%);
+  --sunset-glow: linear-gradient(135deg, rgba(116, 5, 128, 0.12) 0%, rgba(177, 0, 101, 0.12) 30%, rgba(255, 29, 104, 0.12) 60%, rgba(247, 98, 24, 0.12) 85%, rgba(242, 196, 71, 0.12) 100%);
+
+  /* Dark sections — Royal Twilight / Plum Velvet & Deep Wine */
+  --dark-1: #1A0515;
+  --dark-2: #260720;
+  --dark-3: #390B2D;
 
   /* Utility */
-  --divider-gold: rgba(184, 154, 106, 0.40);
-  --divider-wine: rgba(74, 55, 40, 0.25);
-  --divider-rose: rgba(156, 122, 94, 0.25);
-  --shadow-wine: rgba(30, 21, 10, 0.18);
-  --shadow-dark: rgba(22, 16, 10, 0.40);
-  --gold-glow: rgba(184, 154, 106, 0.30);
+  --divider-gold: rgba(242, 196, 71, 0.45);
+  --divider-wine: rgba(138, 25, 31, 0.28);
+  --divider-rose: rgba(177, 0, 101, 0.28);
+  --shadow-wine: rgba(138, 25, 31, 0.22);
+  --shadow-dark: rgba(26, 5, 21, 0.45);
+  --gold-glow: rgba(242, 196, 71, 0.40);
+  --sunset-glow-box: rgba(247, 98, 24, 0.35);
 
   /* Shared accent for couple card parents */
   --accent: var(--wine);
@@ -203,8 +222,8 @@ h3 {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(ellipse at 30% 20%, rgba(255, 255, 255, 0.50), transparent 55%),
-    linear-gradient(160deg, #FAF8F3 0%, #F3EDE3 35%, #E8DDD0 70%, #D9CDBC 100%);
+    radial-gradient(ellipse at 30% 20%, rgba(255, 255, 255, 0.65), transparent 55%),
+    linear-gradient(160deg, #FDF9F7 0%, #FAF0EE 35%, #F4DFE6 70%, #E8CAD4 100%);
   transition: transform 1.2s cubic-bezier(.76, 0, .18, 1), opacity 1.2s ease;
   display: flex;
   flex-direction: column;
@@ -212,7 +231,7 @@ h3 {
 }
 
 .fold.left {
-  border-right: 1px solid rgba(197, 155, 78, 0.35);
+  border-right: 1px solid rgba(242, 196, 71, 0.40);
   align-items: flex-end;
 }
 
@@ -294,12 +313,12 @@ h3 {
   width: 108px;
   height: 108px;
   border-radius: 50%;
-  background: radial-gradient(circle at 38% 30%, #FFFFFF 0%, #FAF6EE 30%, #F0E2C6 70%, #DECA9B 100%);
+  background: radial-gradient(circle at 38% 30%, #FFFFFF 0%, #FFF8EE 30%, #FDF0D5 70%, #F5DCA3 100%);
   border: 2.5px solid var(--gold);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 28px -4px rgba(30, 21, 10, 0.35);
+  box-shadow: 0 8px 28px -4px rgba(138, 25, 31, 0.35);
   animation: pulseRing 2.8s ease-in-out infinite;
 }
 
@@ -312,7 +331,7 @@ h3 {
   font-family: 'Mrs Saint Delafield', cursive;
   font-size: 64px;
   font-weight: 500;
-  fill: var(--wine-deep);
+  fill: var(--wine);
   letter-spacing: 1px;
 }
 
@@ -320,11 +339,11 @@ h3 {
 
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(184, 154, 106, 0.40), 0 8px 28px -4px rgba(30, 21, 10, 0.35);
+    box-shadow: 0 0 0 0 rgba(242, 196, 71, 0.45), 0 8px 28px -4px rgba(138, 25, 31, 0.35);
   }
 
   50% {
-    box-shadow: 0 0 0 16px rgba(184, 154, 106, 0), 0 8px 28px -4px rgba(30, 21, 10, 0.35);
+    box-shadow: 0 0 0 16px rgba(242, 196, 71, 0), 0 8px 28px -4px rgba(138, 25, 31, 0.35);
   }
 }
 
@@ -439,8 +458,10 @@ section {
   padding-top: 70px;
   padding-bottom: 80px;
   background:
-    radial-gradient(ellipse 65% 55% at 50% 20%, rgba(184, 154, 106, 0.16), transparent 75%),
-    radial-gradient(ellipse 70% 60% at 50% 85%, rgba(46, 33, 20, 0.45), transparent 80%),
+    radial-gradient(ellipse 70% 55% at 50% 16%, rgba(242, 196, 71, 0.22), transparent 75%),
+    radial-gradient(ellipse 65% 55% at 85% 45%, rgba(255, 29, 104, 0.20), transparent 70%),
+    radial-gradient(ellipse 65% 55% at 15% 65%, rgba(116, 5, 128, 0.26), transparent 70%),
+    radial-gradient(ellipse 75% 60% at 50% 88%, rgba(138, 25, 31, 0.48), transparent 80%),
     linear-gradient(170deg, var(--dark-1) 0%, var(--dark-2) 48%, var(--dark-3) 100%);
   position: relative;
   color: #ffffff;
@@ -452,9 +473,57 @@ section {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: rgba(255, 238, 204, 0.90);
+  background: radial-gradient(circle, #FFFFFF 0%, var(--gold) 60%, transparent 100%);
+  box-shadow: 0 0 12px 2px rgba(242, 196, 71, 0.90), 0 0 20px rgba(247, 98, 24, 0.60);
   opacity: 0;
   animation: sparkleFloat var(--dur) ease-in-out var(--del) infinite;
+}
+
+.hero-sparkle-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(242, 196, 71, 0.60);
+  padding: 8px 24px;
+  border-radius: 999px;
+  margin: 16px auto 6px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.30), 0 0 16px rgba(242, 196, 71, 0.25);
+  animation: sunsetPillGlow 3.6s ease-in-out infinite alternate;
+}
+
+.hero-sparkle-pill span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16.5px;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #FFF3D4;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.70);
+}
+
+.hero-sparkle-pill .sparkle-icon {
+  font-style: normal;
+  font-size: 15px;
+  filter: drop-shadow(0 0 6px #F2C447);
+}
+
+@keyframes sunsetPillGlow {
+  0% {
+    border-color: rgba(242, 196, 71, 0.55);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25), 0 0 14px rgba(242, 196, 71, 0.20);
+  }
+  50% {
+    border-color: rgba(255, 29, 104, 0.75);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.30), 0 0 20px rgba(255, 29, 104, 0.35);
+  }
+  100% {
+    border-color: rgba(247, 98, 24, 0.75);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.30), 0 0 22px rgba(247, 98, 24, 0.40);
+  }
 }
 
 @keyframes sparkleFloat {
@@ -464,16 +533,16 @@ section {
   }
 
   30% {
-    opacity: 0.8;
+    opacity: 0.9;
   }
 
   70% {
-    opacity: 0.6;
+    opacity: 0.7;
   }
 
   100% {
     opacity: 0;
-    transform: scale(1.2) translateY(-70px);
+    transform: scale(1.3) translateY(-75px);
   }
 }
 
@@ -795,7 +864,7 @@ section {
   font-style: italic;
   color: var(--ink-mute);
   font-size: 15px;
-  margin-top: 3px;
+  margin-top: 18px;
   letter-spacing: 0.03em;
   font-weight: 500;
 }
@@ -966,7 +1035,10 @@ section {
    COUNTDOWN
 ============================================================ */
 .countdown {
-  background: linear-gradient(165deg, var(--dark-1) 0%, var(--dark-2) 55%, var(--dark-3) 100%);
+  background:
+    radial-gradient(ellipse 55% 50% at 15% 20%, rgba(247, 98, 24, 0.18), transparent 65%),
+    radial-gradient(ellipse 55% 50% at 85% 80%, rgba(177, 0, 101, 0.22), transparent 65%),
+    linear-gradient(165deg, var(--dark-1) 0%, var(--dark-2) 55%, var(--dark-3) 100%);
   text-align: center;
   color: var(--pearl);
   overflow: hidden;
@@ -977,8 +1049,8 @@ section {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 50% 50% at 20% 20%, rgba(184, 154, 106, 0.14), transparent 60%),
-    radial-gradient(ellipse 50% 50% at 80% 80%, rgba(184, 154, 106, 0.12), transparent 60%);
+    radial-gradient(ellipse 50% 50% at 20% 20%, rgba(242, 196, 71, 0.16), transparent 60%),
+    radial-gradient(ellipse 50% 50% at 80% 80%, rgba(255, 29, 104, 0.16), transparent 60%);
   pointer-events: none;
 }
 
@@ -998,18 +1070,19 @@ section {
 }
 
 .cbox {
-  border: 1px solid rgba(197, 155, 78, 0.45);
+  border: 1px solid rgba(242, 196, 71, 0.45);
   padding: 28px 10px;
   position: relative;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  background: rgba(35, 8, 17, 0.50);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  background: rgba(38, 7, 32, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .cbox:hover {
-  border-color: rgba(219, 184, 114, 0.85);
-  box-shadow: 0 0 22px -4px var(--gold-glow);
+  border-color: rgba(242, 196, 71, 0.95);
+  box-shadow: 0 0 24px -2px rgba(247, 98, 24, 0.50);
+  transform: translateY(-3px);
 }
 
 .cbox::before,
@@ -1113,8 +1186,8 @@ section {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, var(--gold-soft), transparent);
+  height: 3.5px;
+  background: var(--sunset-gradient);
   opacity: 0;
   transition: opacity 0.35s ease;
 }
@@ -1217,7 +1290,7 @@ section {
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--wine);
+  background: linear-gradient(135deg, var(--wine) 0%, var(--rose) 100%);
   opacity: 0;
   transition: opacity 0.28s ease;
 }
@@ -1229,7 +1302,7 @@ section {
 
 .event-btn:hover {
   color: #fff;
-  border-color: var(--wine);
+  border-color: var(--rose);
 }
 
 .event-btn:hover::before {
@@ -1242,7 +1315,7 @@ section {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 22px;
+  margin-top: 24px;
 }
 
 .event-actions .event-btn {
@@ -1277,6 +1350,252 @@ section {
   font-size: 14.5px;
   display: block;
 }
+
+/* Guest Dress Theme Callout on Engagement Card */
+.event-theme-callout {
+  margin-top: 20px;
+  padding: 16px 18px;
+  background: linear-gradient(135deg, rgba(254, 236, 242, 0.75) 0%, rgba(254, 248, 231, 0.75) 100%);
+  border: 1px dashed rgba(177, 0, 101, 0.40);
+  border-radius: 4px;
+  position: relative;
+}
+
+.theme-callout-header {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 4px;
+}
+
+.theme-callout-icon {
+  font-size: 14px;
+  filter: drop-shadow(0 0 4px var(--gold));
+}
+
+.theme-callout-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--wine);
+}
+
+.theme-callout-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16.5px;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--wine-deep);
+  margin-bottom: 10px;
+}
+
+.theme-callout-pills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.color-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.20);
+  display: inline-block;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  cursor: pointer;
+}
+
+.color-dot:hover {
+  transform: scale(1.30);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.30);
+}
+
+.theme-callout-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+/* ============================================================
+   GUEST COLOR PALETTE SECTION (DRESS CODE)
+   "Meera's Engagement / Mylanchi Color Palette"
+   "It's sunset meets sparkles ✨"
+============================================================ */
+.palette-section {
+  background: var(--ivory);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.palette-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% 30%, rgba(242, 196, 71, 0.10), transparent 70%);
+  pointer-events: none;
+}
+
+.palette-title {
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-size: clamp(44px, 8.5vw, 70px);
+  color: var(--wine);
+  margin-top: 8px;
+  line-height: 1.15;
+}
+
+.palette-tagline-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.palette-tagline-wrap .sparkle-symbol {
+  font-size: 20px;
+  color: var(--gold-deep);
+  filter: drop-shadow(0 0 6px var(--gold));
+  animation: pulseSparkle 2.2s infinite ease-in-out;
+}
+
+@keyframes pulseSparkle {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.25); opacity: 1; }
+}
+
+.palette-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 4.2vw, 32px);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--wine-deep);
+  letter-spacing: 0.04em;
+}
+
+.palette-card-container {
+  max-width: 840px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 44px auto 0;
+  position: relative;
+  z-index: 2;
+}
+
+.palette-strip-card {
+  background: #ffffff;
+  border: 1px solid var(--divider-gold);
+  border-radius: 6px;
+  padding: 16px;
+  box-shadow: 0 18px 48px -15px var(--shadow-wine);
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.palette-strip-card::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(242, 196, 71, 0.35);
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.palette-strip {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+.swatch-col {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.28s ease, filter 0.28s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.swatch-col:hover {
+  transform: translateY(-5px);
+  z-index: 3;
+}
+
+.swatch-bar {
+  height: 140px;
+  background: var(--swatch-bg);
+  position: relative;
+  transition: opacity 0.25s ease;
+}
+
+.swatch-col:hover .swatch-bar {
+  opacity: 0.95;
+}
+
+.swatch-info {
+  background: #ffffff;
+  padding: 14px 6px 16px;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.swatch-code {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+}
+
+.swatch-name {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11.5px;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+
+.palette-footer-note {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.palette-footer-note .dress-text {
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-size: clamp(36px, 7vw, 50px);
+  color: var(--wine);
+  line-height: 1;
+}
+
+.palette-footer-note .heart-hands {
+  font-size: 28px;
+  vertical-align: middle;
+}
+
+.palette-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 17.5px;
+  color: var(--ink-soft);
+  max-width: 600px;
+  margin: 18px auto 0;
+  line-height: 1.7;
+}
+
+
 
 /* ============================================================
    TIMELINE
@@ -1594,7 +1913,10 @@ section {
    BIBLE VERSE / QUOTE
 ============================================================ */
 .quote-section {
-  background: linear-gradient(165deg, var(--dark-1), var(--dark-2) 60%, var(--dark-3));
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 50%, rgba(138, 25, 31, 0.35), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 85% 20%, rgba(255, 29, 104, 0.15), transparent 60%),
+    linear-gradient(165deg, var(--dark-1), var(--dark-2) 60%, var(--dark-3));
   text-align: center;
   color: var(--pearl);
   padding: 100px 8vw;
@@ -1605,7 +1927,7 @@ section {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(184, 154, 106, 0.14), transparent 70%);
+  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(242, 196, 71, 0.12), transparent 70%);
   pointer-events: none;
 }
 
@@ -1701,7 +2023,10 @@ section {
    CLOSING / THANK YOU
 ============================================================ */
 .closing {
-  background: linear-gradient(170deg, var(--dark-1), var(--dark-2) 55%, var(--dark-3));
+  background:
+    radial-gradient(ellipse 50% 40% at 20% 15%, rgba(247, 98, 24, 0.16), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 80% 85%, rgba(177, 0, 101, 0.22), transparent 55%),
+    linear-gradient(170deg, var(--dark-1), var(--dark-2) 55%, var(--dark-3));
   text-align: center;
   color: var(--pearl);
   padding-bottom: 130px;
@@ -1713,8 +2038,7 @@ section {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 50% 40% at 20% 15%, rgba(184, 154, 106, 0.14), transparent 55%),
-    radial-gradient(ellipse 50% 40% at 80% 85%, rgba(184, 154, 106, 0.12), transparent 55%);
+    radial-gradient(ellipse 50% 40% at 50% 30%, rgba(242, 196, 71, 0.14), transparent 60%);
   pointer-events: none;
 }
 
@@ -1904,6 +2228,28 @@ section {
     margin: 0 auto;
   }
 
+  /* Palette Section */
+  .palette-title {
+    font-size: clamp(38px, 9vw, 54px);
+  }
+
+  .palette-tagline {
+    font-size: 20px;
+  }
+
+  .palette-card-container {
+    max-width: 100%;
+    margin-top: 32px;
+  }
+
+  .palette-strip {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .swatch-bar {
+    height: 100px;
+  }
+
   /* Venue */
   .venue-cards {
     gap: 20px;
@@ -2048,6 +2394,18 @@ section {
     letter-spacing: 0.18em;
   }
 
+  /* Hero Sparkle Pill */
+  .hero-sparkle-pill {
+    padding: 6px 18px;
+    margin: 14px auto 4px;
+    max-width: 92%;
+  }
+
+  .hero-sparkle-pill span {
+    font-size: 14px;
+    letter-spacing: 0.08em;
+  }
+
   .hero-cross svg {
     width: 36px;
     height: 36px;
@@ -2111,6 +2469,96 @@ section {
     font-size: 26px;
   }
 
+  .event-reception-note {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  /* Event Theme Callout */
+  .event-theme-callout {
+    padding: 14px 14px;
+    margin-top: 16px;
+  }
+
+  .theme-callout-quote {
+    font-size: 15px;
+  }
+
+  .theme-callout-pills {
+    gap: 7px;
+    flex-wrap: wrap;
+  }
+
+  .color-dot {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Palette Section */
+  .palette-section {
+    padding: 56px 5vw;
+  }
+
+  .palette-section h2,
+  .palette-title {
+    font-size: clamp(34px, 9.5vw, 48px);
+  }
+
+  .palette-tagline-wrap {
+    margin-top: 10px;
+    gap: 8px;
+  }
+
+  .palette-tagline {
+    font-size: 18px;
+  }
+
+  .palette-card-container {
+    margin-top: 26px;
+  }
+
+  .palette-strip-card {
+    padding: 10px;
+  }
+
+  .palette-strip {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .swatch-bar {
+    height: 80px;
+  }
+
+  .swatch-info {
+    padding: 10px 4px 12px;
+  }
+
+  .swatch-code {
+    font-size: 12.5px;
+  }
+
+  .swatch-name {
+    font-size: 10.5px;
+  }
+
+  .palette-footer-note {
+    margin-top: 22px;
+  }
+
+  .palette-footer-note .dress-text {
+    font-size: 32px;
+  }
+
+  .palette-footer-note .heart-hands {
+    font-size: 24px;
+  }
+
+  .palette-desc {
+    font-size: 15.5px;
+    line-height: 1.6;
+    margin-top: 14px;
+  }
+
   .venue-card {
     padding: 34px 20px 28px;
   }
@@ -2128,6 +2576,18 @@ section {
     padding: 13px 18px;
     font-size: 10.5px;
     text-align: center;
+  }
+
+  .event-actions,
+  .venue-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .event-actions .event-btn,
+  .venue-actions .venue-btn {
+    width: 100%;
   }
 
   /* Countdown */
@@ -2189,6 +2649,27 @@ section {
   .timeline h2 {
     font-size: clamp(38px, 10vw, 58px);
   }
+
+  /* Cover on mobile */
+  .cover-bottom {
+    bottom: 6%;
+    padding: 0 10%;
+  }
+
+  .cover-event-badge {
+    font-size: 9.5px;
+    margin-bottom: 10px;
+  }
+
+  .tap-label {
+    margin-top: 14px;
+    font-size: 10px;
+  }
+
+  .cover-event-date {
+    font-size: 9.5px;
+    margin-top: 8px;
+  }
 }
 
 /* --- Small phones (≤ 380px) --- */
@@ -2213,6 +2694,59 @@ section {
   .hero-event-label {
     font-size: 12px;
     letter-spacing: 0.14em;
+  }
+
+  .hero-sparkle-pill {
+    padding: 5px 14px;
+  }
+
+  .hero-sparkle-pill span {
+    font-size: 13px;
+  }
+
+  .event-theme-callout {
+    padding: 12px 10px;
+  }
+
+  .theme-callout-quote {
+    font-size: 14px;
+  }
+
+  .color-dot {
+    width: 18px;
+    height: 18px;
+  }
+
+  .palette-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .swatch-bar {
+    height: 65px;
+  }
+
+  .swatch-info {
+    padding: 8px 3px 10px;
+  }
+
+  .swatch-code {
+    font-size: 11.5px;
+  }
+
+  .swatch-name {
+    font-size: 9.5px;
+  }
+
+  .palette-footer-note .dress-text {
+    font-size: 27px;
+  }
+
+  .palette-footer-note .heart-hands {
+    font-size: 20px;
+  }
+
+  .palette-desc {
+    font-size: 14px;
   }
 
   .countdown-grid {
@@ -2289,6 +2823,10 @@ section {
     font-size: 32px;
   }
 
+  .hero-sparkle-pill span {
+    font-size: 11.5px;
+  }
+
   .countdown-grid {
     max-width: 220px;
   }
@@ -2297,5 +2835,21 @@ section {
   .venue-card,
   .couple-card {
     padding: 22px 12px;
+  }
+
+  .palette-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .palette-strip-card {
+    padding: 8px;
+  }
+
+  .swatch-bar {
+    height: 55px;
+  }
+
+  .swatch-code {
+    font-size: 10.5px;
   }
 }
